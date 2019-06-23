@@ -1,5 +1,5 @@
 module "label" {
-  source     = "git::https://github.com/cloudposse/terraform-null-label.git?ref=tags/0.3.3"
+  source     = "git::https://github.com/rei-devopsplatform/terraform-null-label.git?ref=tags/0.3.3"
   namespace  = "${var.namespace}"
   stage      = "${var.stage}"
   name       = "${var.name}"
@@ -103,7 +103,7 @@ resource "aws_instance" "default" {
 
 module "dns" {
   enabled   = "${var.zone_id != "" ? true : false }"
-  source    = "git::https://github.com/cloudposse/terraform-aws-route53-cluster-hostname.git?ref=tags/0.2.5"
+  source    = "git::https://github.com/rei-devopsplatform/terraform-aws-route53-cluster-hostname.git?ref=tags/0.2.5"
   namespace = "${var.namespace}"
   name      = "${var.name}"
   stage     = "${var.stage}"
